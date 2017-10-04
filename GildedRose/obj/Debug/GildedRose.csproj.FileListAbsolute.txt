@@ -1,0 +1,14 @@
+C:\Users\Sony\RiderProjects\GildedRose\GildedRose\obj\Debug\GildedRose.csprojResolveAssemblyReference.cache
+C:\Users\Sony\RiderProjects\GildedRose\GildedRose\obj\Debug\GildedRose.csproj.CoreCompileInputs.cache
+C:\Users\Sony\RiderProjects\GildedRose\GildedRose\bin\Debug\GildedRose.exe
+C:\Users\Sony\RiderProjects\GildedRose\GildedRose\bin\Debug\GildedRose.pdb
+C:\Users\Sony\RiderProjects\GildedRose\GildedRose\bin\Debug\ApprovalTests.dll
+C:\Users\Sony\RiderProjects\GildedRose\GildedRose\bin\Debug\ApprovalUtilities.dll
+C:\Users\Sony\RiderProjects\GildedRose\GildedRose\bin\Debug\ApprovalUtilities.Net45.dll
+C:\Users\Sony\RiderProjects\GildedRose\GildedRose\bin\Debug\nunit.framework.dll
+C:\Users\Sony\RiderProjects\GildedRose\GildedRose\bin\Debug\ApprovalTests.xml
+C:\Users\Sony\RiderProjects\GildedRose\GildedRose\bin\Debug\ApprovalUtilities.xml
+C:\Users\Sony\RiderProjects\GildedRose\GildedRose\bin\Debug\ApprovalUtilities.Net45.xml
+C:\Users\Sony\RiderProjects\GildedRose\GildedRose\bin\Debug\nunit.framework.xml
+C:\Users\Sony\RiderProjects\GildedRose\GildedRose\obj\Debug\GildedRose.exe
+C:\Users\Sony\RiderProjects\GildedRose\GildedRose\obj\Debug\GildedRose.pdb

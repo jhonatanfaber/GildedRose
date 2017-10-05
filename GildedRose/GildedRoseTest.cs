@@ -11,20 +11,6 @@ namespace GildedRose{
         }
 
         [Test]
-        public void check_dexterity_Vests_name(){
-            IList<Item> Items = new List<Item>{
-                new Item{
-                    Name = "+5 Dexterity Vest",
-                    SellIn = 10,
-                    Quality = 20
-                }
-            };
-            GildedRose app = new GildedRose(Items);
-            app.UpdateQuality();
-            Assert.AreEqual("+5 Dexterity Vest", Items[0].Name);
-        }
-
-        [Test]
         public void check_dexterity_Vests_sellIn_decreased_by_1(){
             IList<Item> Items = new List<Item>{
                 new Item{
@@ -33,8 +19,9 @@ namespace GildedRose{
                     Quality = 19
                 }
             };
-            GildedRose app = new GildedRose(Items);
-            app.UpdateQuality();
+           // GildedRose app = new GildedRose(Items);
+            Data data = new Data(Items);
+            data.getSellInOfItem();
             Assert.AreEqual(8, Items[0].SellIn);
         }
         
@@ -47,8 +34,9 @@ namespace GildedRose{
                     Quality = 19
                 }
             };
-            GildedRose app = new GildedRose(Items);
-            app.UpdateQuality();
+            //GildedRose app = new GildedRose(Items);
+            Data data = new Data(Items);
+            data.getQualityOfBasicItem();
             Assert.AreEqual(18, Items[0].Quality);
         }
         
@@ -61,8 +49,9 @@ namespace GildedRose{
                     Quality = 10
                 }
             };
-            GildedRose app = new GildedRose(Items);
-            app.UpdateQuality();
+            //GildedRose app = new GildedRose(Items);
+            Data data = new Data(Items);
+            data.getQualityOfBasicItem();
             Assert.AreEqual(8, Items[0].Quality);
         }
         
@@ -71,15 +60,17 @@ namespace GildedRose{
             IList<Item> Items = new List<Item>{
                 new Item{
                     Name = "+5 Dexterity Vest",
-                    SellIn = -5,
-                    Quality = 0
+                    SellIn = -6,
+                    Quality = 1
                 }
             };
-            GildedRose app = new GildedRose(Items);
-            app.UpdateQuality();
+            //GildedRose app = new GildedRose(Items);
+            Data data = new Data(Items);
+            data.getQualityOfBasicItem();
             Assert.AreEqual(0, Items[0].Quality);
         }
-        
+
+      
         [Test]
         public void check_age_bries_quality_increases_by_1(){
             IList<Item> Items = new List<Item>{
@@ -88,8 +79,9 @@ namespace GildedRose{
                     Quality = 0
                 }
             };
-            GildedRose app = new GildedRose(Items);
-            app.UpdateQuality();
+            //GildedRose app = new GildedRose(Items);
+            Data data = new Data(Items);
+            data.getQualityOfAgedBrie();
             Assert.AreEqual(1, Items[0].Quality);
         }
 
@@ -101,8 +93,9 @@ namespace GildedRose{
                     Quality = 2
                 }
             };
-            GildedRose app = new GildedRose(Items);
-            app.UpdateQuality();
+            //GildedRose app = new GildedRose(Items);
+            Data data = new Data(Items);
+            data.getQualityOfAgedBrie();
             Assert.AreEqual(4, Items[0].Quality);
         }
         
@@ -114,8 +107,9 @@ namespace GildedRose{
                     Quality = 50
                 }
             };
-            GildedRose app = new GildedRose(Items);
-            app.UpdateQuality();
+            //GildedRose app = new GildedRose(Items);
+            Data data = new Data(Items);
+            data.getQualityOfAgedBrie();
             Assert.AreEqual(50, Items[0].Quality);
         }
         
@@ -127,8 +121,9 @@ namespace GildedRose{
                     Quality = 80
                 }
             };
-            GildedRose app = new GildedRose(Items);
-            app.UpdateQuality();
+            //GildedRose app = new GildedRose(Items);
+            Data data = new Data(Items);
+            data.getSulfurasQuality();
             Assert.AreEqual(80, Items[0].Quality);
         }
         
@@ -141,8 +136,9 @@ namespace GildedRose{
                     Quality = 80
                 }
             };
-            GildedRose app = new GildedRose(Items);
-            app.UpdateQuality();
+            //GildedRose app = new GildedRose(Items);
+            Data data = new Data(Items);
+            data.getSulfurasQuality();
             Assert.AreEqual(80, Items[0].Quality);
         }
         
@@ -155,8 +151,9 @@ namespace GildedRose{
                     Quality = 20
                 }
             };
-            GildedRose app = new GildedRose(Items);
-            app.UpdateQuality();
+            //GildedRose app = new GildedRose(Items);
+            Data data = new Data(Items);
+            data.getBackstagePassesQuality();
             Assert.AreEqual(21, Items[0].Quality);
         }
         
@@ -169,8 +166,9 @@ namespace GildedRose{
                     Quality = 47
                 }
             };
-            GildedRose app = new GildedRose(Items);
-            app.UpdateQuality();
+            //GildedRose app = new GildedRose(Items);
+            Data data = new Data(Items);
+            data.getBackstagePassesQuality();
             Assert.AreEqual(49, Items[0].Quality);
         }
         
@@ -183,8 +181,9 @@ namespace GildedRose{
                     Quality = 49
                 },
             };
-            GildedRose app = new GildedRose(Items);
-            app.UpdateQuality();
+            //GildedRose app = new GildedRose(Items);
+            Data data = new Data(Items);
+            data.getBackstagePassesQuality();
             Assert.AreEqual(50, Items[0].Quality);
         }
         
@@ -197,8 +196,9 @@ namespace GildedRose{
                     Quality = 46
                 }
             };
-            GildedRose app = new GildedRose(Items);
-            app.UpdateQuality();
+            //GildedRose app = new GildedRose(Items);
+            Data data = new Data(Items);
+            data.getBackstagePassesQuality();
             Assert.AreEqual(49, Items[0].Quality);
         }
         
@@ -211,8 +211,9 @@ namespace GildedRose{
                     Quality = 48
                 },
             };
-            GildedRose app = new GildedRose(Items);
-            app.UpdateQuality();
+            //GildedRose app = new GildedRose(Items);
+            Data data = new Data(Items);
+            data.getBackstagePassesQuality();
             Assert.AreEqual(50, Items[0].Quality);
         }
         
@@ -225,8 +226,9 @@ namespace GildedRose{
                     Quality = 50
                 }
             };
-            GildedRose app = new GildedRose(Items);
-            app.UpdateQuality();
+            //GildedRose app = new GildedRose(Items);
+            Data data = new Data(Items);
+            data.getBackstagePassesQuality();
             Assert.AreEqual(0, Items[0].Quality);
         }
         
@@ -239,8 +241,9 @@ namespace GildedRose{
                     Quality = 6
                 }
             };
-            GildedRose app = new GildedRose(Items);
-            app.UpdateQuality();
+            //GildedRose app = new GildedRose(Items);
+            Data data = new Data(Items);
+            data.getQualityOfConjuredItem();
             Assert.AreEqual(4, Items[0].Quality);
         }
         
@@ -253,23 +256,25 @@ namespace GildedRose{
                     Quality = 6
                 }
             };
-            GildedRose app = new GildedRose(Items);
-            app.UpdateQuality();
+            //GildedRose app = new GildedRose(Items);
+            Data data = new Data(Items);
+            data.getQualityOfConjuredItem();
             Assert.AreEqual(2, Items[0].Quality);
         }
         
-        // creo que este sobra
+
         [Test]
-        public void check_conjured_quality_reachs_zero(){
+        public void check_conjured_quality_reaches_zero(){
             IList<Item> Items = new List<Item>{
                 new Item{
                     Name = "Conjured Mana Cake",
-                    SellIn = -2,
-                    Quality = 2
+                    SellIn = 3,
+                    Quality = 1
                 }
             };
-            GildedRose app = new GildedRose(Items);
-            app.UpdateQuality();
+            //GildedRose app = new GildedRose(Items);
+            Data data = new Data(Items);
+            data.getQualityOfConjuredItem();
             Assert.AreEqual(0, Items[0].Quality);
         }
         
